@@ -1,9 +1,23 @@
+/* ===========================================================
+ * Janalytics.js v0.1 - Beta
+ * ===========================================================
+ * Copyright 2013 Julien Henrotte.
+ * http://www.da-ha.be
+ *
+ * Little jQuery plugin to create custom event for Google Analytics.
+ *
+ * Credit: Eike Send for the awesome swipe event
+ * https://github.com/peachananr/onepage-scroll
+ *
+ * ========================================================== */
+
 $.fn.janalytics = function( options ) {
   var settings = $.extend({
           setAccount: "",
           tag: "body",
           selector : ".trueLink",
-          newRelease : true
+          newRelease : true,
+          prevent : false
         }, options );
 
   function analytics(category, action, label){
@@ -36,7 +50,9 @@ $.fn.janalytics = function( options ) {
   }
 
   $(settings.tag).on('click', settings.selector , function(event) {
-    event.preventDefault();
+    if(settings.prevent){
+      event.preventDefault();
+    }
     analytics(this.getAttribute("data-category"),this.getAttribute("data-action"), this.getAttribute('data-label'));
   });
 };
