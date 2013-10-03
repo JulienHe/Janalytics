@@ -57,8 +57,8 @@ _gaq.push(['_trackPageview']);
 
 set the value of newRelease to false and GA will work with the old code.
 
-New step
---------
+Next step
+---------
 
 Improvement of the code
 If you have any suggestions : hoshi.graphi@gmail.com
