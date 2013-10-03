@@ -1,7 +1,7 @@
 Janalytics V0.1 - Beta
 ======================
 
-Little jQuery plugin to create custom event for Google Analytics dashboard.
+Little jQuery plugin to create custom event for Google Analytics.
 
 Basic Usage
 ===========
@@ -37,7 +37,8 @@ $('body').janalytics({
 	setAccount: "", // put your Google Analytics account tracker ID
     tag: "body", // Select the parent, heare I use the body, simple
     selector : ".trueLink", // the classe of the selector of your link (can be class, ID, whatever)
-    newRelease : true // this is something you need to be careful
+    newRelease : true, // this is something you need to be careful
+    prevent : false // if you need to prevent the default event
 });
 ````
 
